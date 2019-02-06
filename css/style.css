@@ -1,0 +1,158 @@
+/***************************
+  SETTINGS
+***************************/
+.nav {
+  display: flex;
+  min-width: 100vw;
+  min-height:100vh;
+}
+
+.nav__item {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .3s ease-in-out;
+}
+
+.nav__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav__image:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+
+
+.nav__item:hover,
+.nav__item:active,
+.nav__item:focus{
+  flex-grow: 3;
+}
+
+.nav__item:hover .nav__image:after,
+.nav__item:active .nav__image:after,
+.nav__item:focus .nav__image:after {
+  opacity: 1;
+}
+
+.nav__title {
+  display: block;
+  max-width:500px;
+  color:white;
+  position: relative;
+  text-decoration: none;
+}
+
+li {
+  font-size: 0;
+  border:none;
+}
+
+li:hover {
+  font-size: 1.5em;
+  border:solid;
+  border-width: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  display: inline-block;
+  font-size: 0.8em;
+  border: inherit;
+  border-width: 1px;
+  padding: 5px 8px;
+  border-color:white;
+}
+
+a:hover {s
+  cursor: pointer;
+  border-color:white;
+}
+
+/***************************
+  DEFAULTS
+***************************/
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+/***************************
+  CUSTOM STYLING
+***************************/
+body {
+  font-size: 1.8rem;
+}
+
+/* sticky footer */
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.header__item,
+.footer__item{
+  flex-grow: 1;
+}
+
+/*ul*/.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*a*/.nav__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media (max-width:650px){
+  li:hover {
+    font-size: 0.8em;
+  }
+  .nav__title {
+    max-width:200px;
+  }
+}
